@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="green darken-4" role="navigation">
+    
+    <div class="nav-wrapper container">
+      <img src="logo.png" alt="Unsplashed background img 1">
+      <ul class="right hide-on-med-and-down">
+        Aeronave CN 235
+        <li><a class="white-text" href="menu.html">menu</a></li>
+        <!--<li><a href="#">Navbar Link</a></li>-->
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a class="white-text" href="menu.html">menu</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h4 class="header center white-text text-darken-4 ">SISTEMA DE INDICACION DE TRASVASE DE COMBUSTIBLE</h4>
+        <div class="row center">
+          <h5 class="header col s12 white-text text-darken-4">EL PRESENTE SISTEMA SE ENCUENTRA EN DESARROLLO Y SE ESTIMA UN PERIODO DE UNAS SEMANAS PARA SU PUESTA EN MARCHA.</h5>
+        </div>
+        
+        
+      
+          
+
+
+        
+
+      </div>
+    </div>
+    <div class="parallax"><img src="background11.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+<div class="container">
+
+  <!--   Icon Section   -->
+  <div class="center Section row">
+      <br>
+    <div class="col s12 m12">
+      <div class="icon-block">
+        <button class="btn waves-effect green darken-4" onclick="funcion_pregunta1()" type="submit" name="action">SISTEMA DE INDICACION DE TRASVASE DE COMBUSTIBLE
+          <i class="material-icons right">flight</i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="center Section row">
+    <div class="col s12 m12">
+      <div class="icon-block">
+        <button class="btn waves-effect green darken-4" onclick="funcion_preguntar2()" type="submit" name="action">SISTEMA DE VENTILACION DE DEPOSITOS DE COMBUSTIBLE
+          <i class="material-icons right">flight</i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="center Section row">
+    <div class="col s12 m12">
+      <div class="icon-block">
+        <button class="btn waves-effect green darken-4" onclick="funcion_preguntar()" type="submit" name="action">SISTEMA DE NIVEL MINIMO DE COMBUSTIBLE
+          <i class="material-icons right">flight</i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="center Section row">
+    <div class="col s12 m12">
+      <div class="icon-block">
+        <button class="btn waves-effect green darken-4" onclick="funcion_preguntar()" type="submit" name="action">SISTEMA DE INDICACION DE
+          TEMPERATURA DE COMBUSTIBLE
+          <i class="material-icons right">flight</i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+  <script>
+function pre(x){
+  return swal(x, {
+        buttons: ["Afirmativo", "Negativo"],
+        icon: src="airplane.png",
+      })
+;
+}
+
+function funcion_pregunta1(){ 
+    pre("EL INDICADOR DEL TANQUE AUXILIAR NO FUNCIONA?")
+    .then((willDelete) => {
+    if (willDelete) {
+
+      pre("Efectue lectura de PAR. \n\n Esta Alto el PAR?")
+      .then((willDelete) => {
+          if (willDelete) {
+            swal("sustituya el control y adaptador de Helice", {
+              icon: "success",
+            });
+          }else{
+            swal("Entonces desmonte el tubo de entrada de aceite y sustituya las empaquetaduras preformadas danadas para continuar.", {
+              icon: "success",
+            });
+          }
+        });
+      } else {
+      swal("Ajuste el Cable de mando de condicion y continue.", {
+        icon: "success",
+      });
+      }
+      });        
+}
+
+
+  </script>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Parallax Template - Materialize</title>
+<!--
+
+  let utterance = new SpeechSynthesisUtterance("Hello world!");
+speechSynthesis.speak(utterance);
+
+-->
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+<style>
+.button {
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: blue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+
+
+
+</head>
+<body>
+  <nav class="blue darken-4" role="navigation">
+    
+    <div class=" nav-wrapper container">
+
+      <img src="logo.png" alt="Unsplashed background img 1">
+
+      <!-- <a id="logo-container" href="#" class="brand-logo">Logo</a> -->
+      <ul class="right hide-on-med-and-down">
+        
+        <li><a class="white-text" href="menu.html">menu</a></li>
+        AERONAVE CN 235
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        AERONAVE CN 235
+        <li><a  href="menu.html">menu</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h4 class="header center WHITE-text text-darken-4 "> <strong>CONTROL DE HELICE</strong></h4>
+        <!--style="background:rgba(10, 10, 10, 0.5)"-->
+        <div class="row center">
+          <h4  class="header center  white-text text-darken-4 ">Investigacion de Averias</h4>
+          <h5 class="header col s12  white-text text-darken-4">Esta seccion contiene los procedimientos de investigacion de averias del sistema de cambio de paso de la helice, Cual es su falla en la Helice?</h5>
+        </div>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="background12.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+<div class="">
+
+  <!--   Icon Section   -->
+  <div class="center Section row">
+      <br>
+    <div class="col s12 m12">
+      <div class="icon-block">
+
+      	<button class="button" onclick="funcion_pregunta1()">la NP maximas son muy bajas
+      		<i class="material-icons right">flight</i></button>
+
+      </div>
+    </div>
+  </div>
+  <div class="center Section row">
+    <div class="col s12 m12">
+      <div class="icon-block">
+        
+      	<button class="button" onclick="funcion_pregunta2()">las Np fluctuan o el cambio  de paso es lento
+      		<i class="material-icons right">flight</i></button>
+
+        <!--<button class="btn waves-effect blue darken-4" onclick="funcion_pregunta2()" type="submit" name="action" style="font-size: 12px">las Np fluctuan o el cambio de paso es lento
+          <i class="material-icons right">flight</i>
+        </button>-->
+      </div>
+    </div>
+  </div>
+  <div class="center Section row">
+    <div class="col s12 m12">
+      <div class="icon-block">
+        
+        <button class="button" onclick="funcion_pregunta3()">las Np maximas son 103%
+      		<i class="material-icons right">flight</i></button>
+
+      </div>
+    </div>
+  </div>
+  <div class="center Section row">
+    <div class="col s12 m12">
+      <div class="icon-block">
+        
+        <button class="button" onclick="funcion_pregunta4()">Resultados de la prueba de sobrevelocidad son incorrectos
+      		<i class="material-icons right">flight</i></button>
+
+      </div>
+    </div>
+  </div>
+  <div class="center Section row">
+    <div class="col s12 m12">
+      <div class="icon-block">
+        
+		<button class="button" onclick="funcion_pregunta5()">la presion de aceite de la helice es baja
+      		<i class="material-icons right">flight</i></button>
+
+      </div>
+    </div>
+  </div>
+  <div class="center Section row">
+    <div class="col s12 m12">
+      <div class="icon-block">
+        
+		<button class="button" onclick="funcion_pregunta6()">las palas permanecen en angulo fijo
+      		<i class="material-icons right">flight</i></button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="center Section row">
+  <div class="col s12 m12">
+    <div class="icon-block">
+
+      <button class="button" onclick="funcion_pregunta7()">las helices no se sincronizan
+      		<i class="material-icons right">flight</i></button>
+     
+    </div>
+  </div>
+</div>  
+<!--
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background12.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+-->
+
+<script>
+
+function pre(x){
+  return swal(x, {
+        buttons: ["Afirmativo", "Negativo"],
+        icon: src="airplane.png",
+      })
+;
+}
+
+
+function funcion_pregunta1(){ 
+    pre("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?")
+    .then((willDelete) => {
+    if (willDelete) {
+
+      pre("Efectue lectura de PAR. \n\n Esta Alto el PAR?")
+      .then((willDelete) => {
+          if (willDelete) {
+            swal("sustituya el control y adaptador de Helice", {
+              icon: "success",
+            });
+          }else{
+            swal("Entonces desmonte el tubo de entrada de aceite y sustituya las empaquetaduras preformadas danadas para continuar.", {
+              icon: "success",
+            });
+          }
+        });
+      } else {
+      swal("Ajuste el Cable de mando de condicion y continue.", {
+        icon: "success",
+      });
+      }
+      });        
+}
+
+function funcion_pregunta2(){
+  pre("Observe el manometro de aceite de la Helice \n\n Esta Baja La presion de Aceite?")
+    .then((willDelete) => {
+    if (willDelete) {
+
+      pre("Ponga la helice en bandera utilizando la bomba auxiliar de puesta en Bandera \n\n Funciona Correctamente el cambio de paso?")
+      .then((willDelete) => {
+          if (willDelete) {
+           
+
+              pre("Sospeche de las empaquetaduras Preformadas Del Tubo de Entrada de Aceite e inspeccione si esta obstruido sino Sustituya el Conjunto de Control Y Adaptador.\n\n ¿Funciona Correctamente el Cambio de PASO?")
+                .then((willDelete) => {
+                if (willDelete) {
+                  swal("Entonces el Actuador de Piston Del Conjunto de La Helice esta Defectuoso. \n\n Sustituya el conjunto de la helice y verifique su funcionamiento.", {
+                    icon: "success",
+                  });
+                }else{
+                  swal("Continue Con El Mantenimiento.", {
+                    icon: "success",
+                  });
+                }
+              });
+
+           
+          }else{
+            swal("La Bomba de Presion de la caja Reductora de la Helice esta Defectuosa. Desmonte el grupo Motopropulsor.\n\n y continue.", {
+              icon: "success",
+            });
+          }
+        });
+
+      } else {
+        
+       pre("Inspeccione los siguientes elementos, con posibles fugas:\n - Domo de la helice \n - valvula de descarga \n - control y Adaptador \n - Regulador de Velocidad \n\n Alguno Presenta Fuga?")
+            .then((willDelete) => {
+            if (willDelete) {
+              swal("Continue Con El Mantenimiento.", {
+              icon: "success",
+            });
+                }else{
+                  swal("Sustituye el Elemento que tenga Fugas, y continue.", {
+                    icon: "success",
+                  });     
+            }
+          });
+          }  
+
+});
+}  
+
+
+function funcion_pregunta3(){ 
+  swal("Sustituya el Control Y Adaptador de la Helice y Verifique NP maximas.", {
+              icon: "success",
+            });       
+}
+
+function funcion_pregunta4(){ 
+  swal("Sustituya el Regulador de SobreVelocidad.", {
+              icon: "success",
+            });       
+}
+
+function funcion_pregunta5(){ 
+  swal("Inspeccione los siguientes elementos, con posibles fugas:\n - Domo de la helice \n - valvula de descarga \n - control y Adaptador \n - Regulador de Velocidad \n\n Si Hay Fugas Sustituya el Elemento Que las Posea.", {
+              icon: "success",
+            });       
+}
+
+function funcion_pregunta6(){ 
+  pre("Observe el manometro de Aceite de la Helice \n\n Esta Baja La Presion del Aceite?")
+    .then((willDelete) => {
+    if (willDelete) {
+
+      pre("Sustituya el conjunto de control y adaptador \n\n Funciona el Correctamente el cambio de paso?")
+      .then((willDelete) => {
+          if (willDelete) {
+            swal("Entonces el Actuador de Piston Del Conjunto de La Helice esta Defectuoso. \n\n Sustituya el conjunto de la helice y verifique su funcionamiento.", {
+              icon: "success",
+            });
+          }else{
+            swal("Continua con el Mantenimiento.", {
+              icon: "success",
+            });
+          }
+        });
+      
+      }else{
+      
+        swal("Inspeccione los siguientes elementos, con posibles fugas:\n - Domo de la helice \n - valvula de descarga \n - control y Adaptador \n - Regulador de Velocidad \n\n Si Hay Fugas Sustituya el Elemento Que las Posea.", {
+              icon: "success",
+            }); 
+
+      }
+      });        
+}
+
+
+function funcion_pregunta7(){ 
+  pre("Compruebe la separacion del sensor magnetico \n\n Esta Ajustado Incorrectamente?")
+    .then((willDelete) => {
+    if (willDelete) {
+
+      pre("Instale Provisionalmente una unidad de control de sincronizacion de fase Util. \n\n Esta disponible la sincronizacion de fase?")
+      .then((willDelete) => {
+          if (willDelete) {
+            
+
+            pre("Desconecte El Conector ZD133b de la caja de palancas y efectuar la prueba de suministro de potencia en el terminal p. \n\n Hay falta de suministro en la Potencia?")
+            .then((willDelete) => {
+                if (willDelete) {
+
+
+
+
+
+                    pre("Efectue Prueba de Continuidad en el conector ZD133b, entre los terminales p y n con el interruptor KD7 Ajustado en ON. \n\n Hay Algun Fallo?")
+                    .then((willDelete) => {
+                      if (willDelete) {
+
+
+
+                            pre("Sospeche que el motor de PAR de control y adaptador esta defectuoso. sustituya el control y adaptador. \n\n El sistema esta Util?")
+                            .then((willDelete) => {
+                              if (willDelete) {
+                                swal("Inspeccione el Cableado Defectuoso, Reparelo o Sustituyalo segun sea Necesario. \n\n Continue Por Favor", {
+                                  icon: "success",
+                                });
+                              }else{
+                                swal("El sistema del sincronizador de fase de la helice esta correcto. \n\n Continue Por Favor", {
+                                  icon: "success",
+                                });
+                              }
+                            });
+
+
+
+                      }else{
+                        swal("Repare O Sustituye La Caja de Palancas, y continue Por favor.", {
+                          icon: "success",
+                        });
+                      }
+                    });
+
+
+
+
+
+
+
+                }else{
+                  swal("Sustituya o Repare el Cableado Entre La Caja de Palancas y el Panel de Interruptores Automaticos L Miscellaneous, PC9.", {
+                    icon: "success",
+                  });
+                }
+              });
+
+
+
+          }else{
+            swal("Sustituya La Unidad de control de sincronizacion de Fase.", {
+              icon: "success",
+            });
+          }
+        });
+      
+      }else{
+      
+        swal("Ajuste el Sensor Magnetico. \n\n y continue Por Favor.", {
+              icon: "success",
+            }); 
+
+      }
+      });        
+}
+
+
+function funcion_alert(mensaje){
+
+      swal(mensaje, {
+        buttons: ["Negativo", "Afirmativo"],
+      })
+
+      .then((willDelete) => {
+  if (willDelete) {
+    swal("dijo si!", {
+      icon: "success",
+    });
+  } else {
+    swal("dijo no!");
+  }
+});
+    }
+
+
+    
+
+  </script>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="sweetalert.min.js"></script>
+  </body>
+</html>
