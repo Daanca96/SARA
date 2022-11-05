@@ -42,7 +42,7 @@ speechSynthesis.speak(utterance);
 </style>
 
 
-<script src="js/voz/artyom.js"></script>
+<script src="js/voz/artyom.window.js"></script>
 
 
 
@@ -264,7 +264,9 @@ function pre(x){
 
 
 function funcion_pregunta1(){ 
-  artyom.say("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?");
+  
+var Jarvis = new Artyom();
+  Jarvis.say("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?");
     pre("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?")
     .then((willDelete) => {
     if (willDelete) {
