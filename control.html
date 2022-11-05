@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-ES">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -42,12 +42,18 @@ speechSynthesis.speak(utterance);
 </style>
 
 
+<script src="voz/artyom.min.js"></script>
+
+
+
   <script >
       function decir(texto){
     speechSynthesis.speak(new SpeechSynthesisUtterance(texto));
 }
 
    </script>
+
+
 
 </head>
 <body onload="decir('Investigacion de Averias. Esta seccion contiene los procedimientos de investigacion de averias del sistema de cambio de paso de la helice, Cual es su falla en la Helice?')">
@@ -258,11 +264,11 @@ function pre(x){
 
 
 function funcion_pregunta1(){ 
-  decir("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?");
+  artyom.say("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?");
     pre("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?")
     .then((willDelete) => {
     if (willDelete) {
-      decir("Efectue lectura de PAR.  Esta Alto el PAR?");
+      artyom.say("Efectue lectura de PAR.  Esta Alto el PAR?");
       pre("Efectue lectura de PAR. \n\n Esta Alto el PAR?")
       .then((willDelete) => {
           if (willDelete) {
