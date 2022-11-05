@@ -263,10 +263,20 @@ function pre(x){
 }
 
 
+	function hablar(x){
+		artyom.say(x,{
+		    lang:"es-ES",
+		    onEnd:function(){
+			console.log("El texto ha sido leido");
+		    }
+		});
+	}
+	
+	
 function funcion_pregunta1(){ 
   
-var Jarvis = new Artyom();
-  Jarvis.say("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?");
+
+  hablar("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?");
     pre("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?")
     .then((willDelete) => {
     if (willDelete) {
