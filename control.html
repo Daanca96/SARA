@@ -274,21 +274,11 @@ function pre(x){
 	
 	
 function funcion_pregunta1(){ 
-  
-/*
-const artyom = new Artyom();
-	
-  artyom.say("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?",{ lang:"es-ES",
-		    onEnd:function(){
-			console.log("El texto ha sido leido");
-		    }
-		});
-	*/
-	
+  //decir("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?");
     pre("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?")
     .then((willDelete) => {
     if (willDelete) {
-      artyom.say("Efectue lectura de PAR.  Esta Alto el PAR?");
+      //decir("Efectue lectura de PAR.  Esta Alto el PAR?");
       pre("Efectue lectura de PAR. \n\n Esta Alto el PAR?")
       .then((willDelete) => {
           if (willDelete) {
@@ -308,6 +298,7 @@ const artyom = new Artyom();
       }
       });        
 }
+
 
 function funcion_pregunta2(){
   pre("Observe el manometro de aceite de la Helice \n\n Esta Baja La presion de Aceite?")
