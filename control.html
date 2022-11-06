@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-ES">
+<html lang="es">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -15,6 +15,7 @@ speechSynthesis.speak(utterance);
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
+   <script src="js/voz/artyom.window.js"></script>
 
 <style>
 .button {
@@ -42,10 +43,6 @@ speechSynthesis.speak(utterance);
 </style>
 
 
-<script src="js/voz/artyom.window.js"></script>
-
-
-
   <script >
       function decir(texto){
     speechSynthesis.speak(new SpeechSynthesisUtterance(texto));
@@ -53,10 +50,8 @@ speechSynthesis.speak(utterance);
 
    </script>
 
-
-
 </head>
-<body>
+<body onload="//decir('Investigacion de Averias. Esta seccion contiene los procedimientos de investigacion de averias del sistema de cambio de paso de la helice, Cual es su falla en la Helice?')">
   <nav class="blue darken-4" role="navigation">
     
     <div class=" nav-wrapper container">
@@ -65,17 +60,18 @@ speechSynthesis.speak(utterance);
 
       <!-- <a id="logo-container" href="#" class="brand-logo">Logo</a> -->
       <ul class="right hide-on-med-and-down">
-         <li><a class="white-text" href="vocabulario_control.html">VOCABULARIO</a></li>
-        <li><a class="white-text" href="menu.html">menu</a></li>
+         <li><a class="waves-effect waves-light btn" href="vocabulario_control.html">VOCABULARIO</a></li>
+        <li><a class="waves-effect waves-light btn" href="menu.html">MENU</a></li>
         AERONAVE CN 235
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
         AERONAVE CN 235
-        <li><a class="white-text" href="vocabulario_control.html">VOCABULARIO</a></li>
-        <li><a  href="menu.html">menu</a></li>
+
+        <li><a class="waves-effect waves-light btn" href="vocabulario_control.html">VOCABULARIO</a></li>
+        <li><a class="waves-effect waves-light btn" href="menu.html">MENU</a></li>
       </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger white-text"><i class="material-icons">menu</i></a>
     </div>
 
   </nav>
@@ -262,19 +258,24 @@ function pre(x){
 ;
 }
 
-
-	function hablar(x){
-		artyom.say(x,{
-		    lang:"es-ES",
-		    onEnd:function(){
-			console.log("El texto ha sido leido");
-		    }
-		});
-	}
-	
-	
+/*
+const artyom = new Artyom();
+  
+  artyom.say("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?",{ lang:"es-ES",
+        onEnd:function(){
+      console.log("El texto ha sido leido");
+        }
+    });
+  */
 function funcion_pregunta1(){ 
   //decir("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?");
+  const artyom = new Artyom();
+  
+  artyom.say("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?",{ lang:"es-ES",
+        onEnd:function(){
+      console.log("El texto ha sido leido");
+        }
+    });
     pre("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?")
     .then((willDelete) => {
     if (willDelete) {
@@ -298,7 +299,6 @@ function funcion_pregunta1(){
       }
       });        
 }
-
 
 function funcion_pregunta2(){
   pre("Observe el manometro de aceite de la Helice \n\n Esta Baja La presion de Aceite?")
@@ -399,12 +399,12 @@ function funcion_pregunta6(){
 
 
 function funcion_pregunta7(){ 
-  decir("Compruebe la separacion del sensor magnetico Esta Ajustado Incorrectamente?");
+  //decir("Compruebe la separacion del sensor magnetico Esta Ajustado Incorrectamente?");
   pre("Compruebe la separacion del sensor magnetico \n\n Esta Ajustado Incorrectamente?")
     .then((willDelete) => {
     if (willDelete) {
 
-      decir("Instale Provisionalmente una unidad de control de sincronizacion de fase Util. Esta disponible la sincronizacion de fase?");
+      //decir("Instale Provisionalmente una unidad de control de sincronizacion de fase Util. Esta disponible la sincronizacion de fase?");
       pre("Instale Provisionalmente una unidad de control de sincronizacion de fase Util. \n\n Esta disponible la sincronizacion de fase?")
       .then((willDelete) => {
           if (willDelete) {
@@ -506,6 +506,7 @@ function funcion_alert(mensaje){
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+
   <script src="sweetalert.min.js"></script>
   </body>
 </html>
