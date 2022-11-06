@@ -92,7 +92,7 @@ speechSynthesis.speak(utterance);
     <div class="parallax"><img src="background12.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-
+<audio id="click-sound" crossorigin="anonymous" src="pregunta1.ogg"></audio>
 <div class="">
 
   <!--   Icon Section   -->
@@ -271,7 +271,7 @@ function funcion_pregunta1(){
   //decir("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?");
   const artyom = new Artyom();
   
-  artyom.say("Compruebe el ajuste del cable de mando de condición entre el adaptador de control de la hélice y la HMU. \n\n ¿Esta Desajustado el Cable?",{ lang:"es-ES",
+  artyom.say("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?",{ lang:"es-ES",
         onEnd:function(){
       console.log("El texto ha sido leido");
         }
@@ -301,6 +301,14 @@ function funcion_pregunta1(){
 }
 
 function funcion_pregunta2(){
+
+
+
+var audio = document.getElementById("click-sound");
+
+audio.play();
+
+
   pre("Observe el manometro de aceite de la Helice \n\n Esta Baja La presion de Aceite?")
     .then((willDelete) => {
     if (willDelete) {
