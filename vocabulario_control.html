@@ -150,7 +150,7 @@ en Bandera, Sobrevelocidad y Sincronización de Fases</h4>
               KD3
             </td>
             <td>
-                <a class="" onclick="funcion_img()">Unidad de Control de
+                <a class="" onclick="funcion_img('img/kd3.jpg')">Unidad de Control de
                 Sincronización de
                 Fase</a>
               </td>
@@ -166,7 +166,7 @@ en Bandera, Sobrevelocidad y Sincronización de Fases</h4>
               KC50
             </td>
             <td>
-                <a class="" onclick="funcion_img()">Unidad de Control 
+                <a class="" onclick="funcion_img('img/kc50.jpg')">Unidad de Control 
                   FEATHER SYS</a>
               </td>
             <td>211</td>
@@ -182,7 +182,7 @@ en Bandera, Sobrevelocidad y Sincronización de Fases</h4>
                (KC42)
             </td>
             <td>
-                <a class="" onclick="funcion_img()">Bomba Auxiliar</a>
+                <a class="" onclick="funcion_img('img/kc41.jpg')">Bomba Auxiliar</a>
               </td>
             <td>  413 <br>
                   423</td>
@@ -199,7 +199,7 @@ en Bandera, Sobrevelocidad y Sincronización de Fases</h4>
                 (KC38)
             </td>
             <td>
-                <a class="" onclick="funcion_img()">Regulador de 
+                <a class="" onclick="funcion_img('img/kc37.jpg')">Regulador de 
 Sobrevelocidad</a>
               </td>
             <td> 413 <br>
@@ -217,7 +217,7 @@ Sobrevelocidad</a>
                 (KC34)
             </td>
             <td>
-                <a class="" onclick="funcion_img()">Manocontactor</a>
+                <a class="" onclick="funcion_img('img/KC33.jpg')">Manocontactor</a>
               </td>
             <td> 413 <br>
                 (423)</td>
@@ -232,7 +232,7 @@ Sobrevelocidad</a>
                 ---
             </td>
             <td>
-                <a class="" onclick="funcion_img()">Conjunto de
+                <a class="" onclick="funcion_img('img/KC39.jpg')">Conjunto de
 Adaptador y Control</a>
               </td>
             <td> 413 <br>
@@ -252,7 +252,7 @@ Adaptador y Control</a>
                 (KC40)
             </td>
             <td>
-                <a class="" onclick="funcion_img()">Interruptor Beta</a>
+                <a class="" onclick="funcion_img('img/7.jpg')">Interruptor Beta</a>
               </td>
             <td> </td>
             <td></td>
@@ -360,6 +360,44 @@ SYSTEM TESTS</a>
                 (422AL) </td>
             <td>61-20-19</td>
           </tr>
+
+
+          <tr>
+            <td></td>
+            <td>
+                 KC21 <br>
+                 (KC22)
+            </td>
+            <td>
+                <a class="" onclick="funcion_img()">Interruptor L (R)
+OVSP GOVERNOR</a>
+              </td>
+            <td>  </td>
+            <td>412AL <br>
+                (422AL) </td>
+            <td></td>
+          </tr>
+
+
+
+
+          <tr>
+            <td>11.</td>
+            <td>
+                 ZD118
+            </td>
+            <td>
+                <a class="" onclick="funcion_img()">Unidad de Control 
+SYSTEM TESTS</a>
+              </td>
+            <td>  412 <br>
+                 (422)  </td>
+            <td>412AL <br>
+                (422AL) </td>
+            <td>61-20-19</td>
+          </tr>
+
+
 
 
         </tbody>
@@ -678,9 +716,9 @@ function funcion_alert(mensaje){
 
 
 
-function funcion_img(){
+function funcion_img(x){
   Swal.fire({
-  imageUrl: 'img/kd3.jpg',
+  imageUrl: x,
   imageHeight: 592,
   imageAlt: 'A tall image'
 })
