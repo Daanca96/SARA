@@ -271,11 +271,15 @@ function funcion_pregunta1(){
   //decir("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?");
   const artyom = new Artyom();
   
+  /*
   artyom.say("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?",{ lang:"es-ES",
         onEnd:function(){
       console.log("El texto ha sido leido");
         }
     });
+*/
+
+
     pre("Compruebe el ajuste del cable de mando de condicion entre el adaptador de control de la helice y la HMU. \n\n Esta Desajustado el Cable?")
     .then((willDelete) => {
     if (willDelete) {
@@ -306,7 +310,7 @@ function funcion_pregunta2(){
 
 var audio = document.getElementById("click-sound");
 
-audio.play();
+//audio.play();
 
 
   pre("Observe el manometro de aceite de la Helice \n\n Esta Baja La presion de Aceite?")
