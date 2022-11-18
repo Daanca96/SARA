@@ -57,7 +57,6 @@ speechSynthesis.speak(utterance);
 
       <img src="logo.png" alt="Unsplashed background img 1">
 
-      <!-- <a id="logo-container" href="#" class="brand-logo">Logo</a> -->
       <ul class="right hide-on-med-and-down">
         <li><a class="waves-effect waves-light btn" href="control.html">Control</a></li>
         <li><a class="waves-effect waves-light btn" href="menu.html">Menu</a></li>
@@ -94,7 +93,7 @@ speechSynthesis.speak(utterance);
 <div class="">
 
   <!--   Icon Section   -->
-  <div class="center Section row">
+  <div class="center Section row ">
       <br>
 
 
@@ -150,9 +149,7 @@ en Bandera, Sobrevelocidad y Sincronización de Fases</h4>
               KD3
             </td>
             <td>
-                <a class="" onclick="funcion_img('img/kd3.jpg')">Unidad de Control de
-                Sincronización de
-                Fase</a>
+                <a class="" onclick="funcion_img2('img/kd3.jpg',' es un mecanismo controlado por microprocesador que sincroniza el giro y la fase de pala de las hélices izquierda y derecha.')">Unidad de Control de Sincronización de Fase</a>
               </td>
             <td>222</td>
             <td>222CR</td>
@@ -166,7 +163,7 @@ en Bandera, Sobrevelocidad y Sincronización de Fases</h4>
               KC50
             </td>
             <td>
-                <a class="" onclick="funcion_img('img/kc50.jpg')">Unidad de Control 
+                <a class="" onclick="funcion_img2('img/kc50.jpg','dispone de los interruptores,indicadores y relés para la puesta en bandera de la hélice en ambos modos manual y automático.')">Unidad de Control 
                   FEATHER SYS</a>
               </td>
             <td>211</td>
@@ -517,6 +514,133 @@ FTR</a>
           </tr>
 
 
+
+
+          <tr>
+            <td>14.</td>
+            <td>
+                 PC12
+            <td>
+                <a class="" onclick="funcion_img('pc12.jpg')">  Panel de Int. Aut.
+                BATTERY BUS 2
+                </a>
+              </td>
+            <td>211 </td>
+            <td>- </td>
+            <td>24-50-03 </td>
+          </tr>
+
+
+
+          <tr>
+            <td></td>
+            <td>
+                 KC2
+            <td>
+                <a class="" onclick="funcion_img('pc12.jpg')"> Interruptor
+Automático PROP BETA
+                </a>
+              </td>
+            <td> </td>
+            <td></td>
+            <td> </td>
+          </tr>
+
+
+
+          <tr>
+            <td></td>
+            <td>
+                 KC4
+            <td>
+                <a class="" onclick="funcion_img('pc12.jpg')">  Interruptor
+Automático PROP FTR
+                </a>
+              </td>
+            <td> </td>
+            <td></td>
+            <td> </td>
+          </tr>
+
+
+
+          <tr>
+            <td>15.</td>
+            <td>
+                 PC9
+            <td>
+                <a class="" onclick="funcion_img('pc12.jpg')">   Panel de Int. Aut. 
+L MISCELLANEOUS
+                </a>
+              </td>
+            <td>222 </td>
+            <td>- </td>
+            <td>24-58-15 </td>
+          </tr>
+
+
+          <tr>
+            <td></td>
+            <td>
+                 KD1
+            <td>
+                <a class="" onclick="funcion_img('pc12.jpg')">  Interruptor
+Automático SYNC PROP
+                </a>
+              </td>
+            <td></td>
+            <td></td>
+            <td> </td>
+          </tr>
+
+
+          <tr>
+            <td>16.</td>
+            <td>
+                 ZD133
+            <td>
+                <a class="" onclick="funcion_img('pc12.jpg')">Caja de Palancas
+                </a>
+              </td>
+            <td>213</td>
+            <td>-</td>
+            <td>76-10-11</td>
+          </tr>
+
+
+          <tr>
+            <td>17.</td>
+            <td>
+                 KC80
+            <td>
+                <a class="" onclick="funcion_img('pc12.jpg')">Conmutador
+Automático
+                </a>
+              </td>
+            <td>221</td>
+            <td>221CL</td>
+            <td>61-20-11</td>
+          </tr>
+
+
+          <tr>
+            <td>18.</td>
+            <td>
+                 GB17 <br>
+                  (GB16)
+            <td>
+                <a class="" onclick="funcion_img('pc12.jpg')">Microinterruptor de
+Sensación de Tierra
+                </a>
+              </td>
+            <td>731 <br>
+            (741)</td>
+            <td>163AL <br>
+            (164BR)</td>
+            <td>32-42-28</td>
+          </tr>
+
+
         </tbody>
       </table>
 
@@ -831,7 +955,14 @@ function funcion_alert(mensaje){
 });
     }
 
-
+var xer = "";
+function info(){
+  Swal.fire(
+  'Descripción de Componente',
+   xer,
+  {icon: src="lupa.png"}
+);
+}
 
 function funcion_img(x){
   Swal.fire({
@@ -841,6 +972,19 @@ function funcion_img(x){
 })
 }
 
+
+function funcion_img2(x,y){
+
+  xer=y;
+
+  Swal.fire({
+  imageUrl: x,
+  imageHeight: 592,
+  imageAlt: 'A tall image',
+  footer: '  <a class="waves-effect waves-light btn" onclick="info(xer)"  >MAS INFORMACION</a>'
+})
+
+}
     
 
   </script>
